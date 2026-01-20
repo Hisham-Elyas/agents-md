@@ -2,54 +2,66 @@
 
 Welcome to the **Agents MD** repository. This project serves as a comprehensive knowledge base and guideline set for AI Agents (and human developers) to build high-quality, scalable, and professional Flutter applications.
 
-## 📚 Documentation Index
+## 📚 Complete Documentation Index
 
-We support multiple architectural patterns. Choose the guide that matches your project's needs:
+This repository contains multiple generations of agent guidelines. Choose the one that best fits your needs.
 
-### 1. [BLoC Professional Architecture](./agents_BLoC_pro.md)
-**Recommended for: Enterprise Apps, Complex State**
-- **Architecture**: Feature-First Clean Architecture.
-- **State Management**: `flutter_bloc` + `freezed` (Unions).
-- **Core Stack**: `injectable` (DI), `retrofit` (Network), `go_router` (Navigation).
-- **Key Rules**: strict "No Hardcoded Strings", immutable states, generated localization keys.
+### 🌟 Recommended Recommendations (V2 System)
+These are the most up-to-date "Super Prompts" that combine strict architecture with general coding best practices.
 
-### 2. [GetX Professional Architecture](./agents_getx.md)
-**Recommended for: Rapid Development, Performance-Critical Apps**
-- **Architecture**: Feature-First Clean Architecture with GetX Modules.
-- **State Management**: `GetxController` + `freezed` (State Unions) + `Obx`.
-- **Core Stack**: `GetConnect`/`Dio`, `GetX Bindings` (DI), `GetPage` (Routes).
-- **Key Rules**: Reactive state management, dependency decoupling via bindings.
+*   **[BLoC Professional V2](./agents_BLoC_pro_v2.md)**
+    *   **Best for:** Enterprise apps, complex state.
+    *   **Tech:** `flutter_bloc`, `freezed`, `injectable`, `go_router`.
+    *   **Highlights:** Strict rules + Best practices included.
 
-### 3. [Standard Flutter Guidelines](./agents.md)
-**Recommended for: General Reference**
-- **Overview**: Base guidelines for folder structure, naming conventions, and common utilities.
-- **Utilities**: includes helpers for Parsing, Debouncing, and Image Picking.
+*   **[GetX Professional V2](./agents_getX_v2.md)**
+    *   **Best for:** Rapid development, performance.
+    *   **Tech:** `GetX`, `freezed`, `Bindings`.
+    *   **Highlights:** Strict rules + Best practices included.
 
 ---
 
-## 🛠️ Technology Stack
+### 🏛️ Legacy Guidelines (V1)
+These are the original strict architectural guides. They focus purely on the tech stack without general best practices.
 
-Our "Professional" guidelines strictly enforce a modern, type-safe stack:
+*   **[BLoC Professional (Original)](./agents_BLoC_pro.md)**
+    *   The original strict guide for BLoC architecture.
 
-| Category | Library | Purpose |
-|----------|---------|---------|
-| **State** | `flutter_bloc` / `get` | State Management |
-| **Immutability** | `freezed` | Immutable Data Classes & Unions |
-| **DI** | `injectable` / `get_it` | Dependency Injection |
-| **Network** | `retrofit` + `dio` | Type-safe HTTP Client |
-| **UI** | `flutter_screenutil` | Responsive Design |
-| **Loading** | `skeletonizer` | Skeleton Loading Animations |
-| **Storage** | `flutter_secure_storage` | Secure Token Storage |
-| **I18n** | `easy_localization` | Localization with Code Gen |
+*   **[GetX Professional (Original)](./agents_getX.md)**
+    *   The original strict guide for GetX architecture.
+
+---
+
+### 🧠 Foundation & Standard Rules
+These files provide the underlying rules and standard practices.
+
+*   **[AI Rules for Flutter](./rules.md)**
+    *   **The Brain**: General Flutter/Dart wisdom (SOLID, UI/UX, Testing). This powers the V2 guides.
+
+*   **[Standard Flutter Guidelines](./agents.md)**
+    *   **The Basics**: General folder structure and common utilities for non-feature-first projects.
+
+---
+
+## 🛠️ Technology Stack Overview
+
+| Library | Purpose | Used In |
+| :--- | :--- | :--- |
+| `flutter_bloc` | State Management | BLoC Pro |
+| `GetX` | State Management, Nav, DI | GetX Pro |
+| `freezed` | Immutability (Unions) | **All Pro Guides** |
+| `retrofit` | Networking | **All Pro Guides** |
+| `flutter_screenutil` | Responsive UI | **All Pro Guides** |
+| `easy_localization` | I18n | **All Pro Guides** |
+
+---
 
 ## 🤝 How to Contribute
 
-We welcome contributions! If you have a better way to structure code or a new tool to recommend:
-
 1.  **Fork** this repository.
-2.  Create a new branch: `git checkout -b feature/amazing-guideline`.
-3.  Commit your changes.
-4.  Push to your fork and submit a **Pull Request**.
+2.  Create a branch (`feature/new-guide`).
+3.  Commit and Push.
+4.  Submit a **Pull Request**.
 
 ---
 
